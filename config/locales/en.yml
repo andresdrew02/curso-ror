@@ -38,6 +38,7 @@ en:
       addTitle: 'Create a new product'
     index:
       mainTitle: 'Products'
+      all: 'All'
   sureMsg: 'Are you sure?'
   cursoTitle: 'Ruby-On-Rails course'
   addNewLinkTitle: 'Create product'

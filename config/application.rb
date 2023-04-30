@@ -23,5 +23,8 @@ module Curso
 
     #idioma por defecto
     config.i18n.default_locale = :es
+
+    #Permitir multiquery (async)
+    config.active_record.async_query_executor = :global_thread_pool
   end
 end

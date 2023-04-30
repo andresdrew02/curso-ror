@@ -39,6 +39,7 @@ es:
       addTitle: 'Añadir nuevo producto'
     index:
       mainTitle: 'Productos'
+      all: 'Todos'
 
   sureMsg: '¿Está seguro?'
   cursoTitle: 'Curso de Ruby-On-Rails'
