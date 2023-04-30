@@ -1,13 +1,17 @@
 es:
+  title: Categorias
   activerecord:
     models:
       product: 'Producto'
+      category: 'Categoría'
     attributes:
       product:
         title: 'Título'
         description: 'Descripción'
         price: 'Precio'
         photo: 'Foto'
+      category:
+        name: 'Nombre'
     errors:
       models:
         product:
@@ -17,6 +21,10 @@ es:
             description:
               blank: 'es obligatoria'
             price:
+              blank: 'es obligatorio'
+        category:
+          attributes:
+            name:
               blank: 'es obligatorio'
 
   products:
@@ -34,3 +42,27 @@ es:
   createdMsg: 'Tu producto se ha creado correctamente'
   editedMsg: "El producto se ha editado correctamente"
   deletedMsg: 'Tu producto se ha eliminado correctamente'
+
+  categories:
+    index:
+      title: 'Categorias'
+      new: 'Crear categoría'
+    edit:
+      title: 'Editar categoría'
+    new:
+      title: 'Nueva categoría'
+    update:
+      updated: "La categoría se ha editado correctamente."
+    create:
+      created: "La categoría se ha creado correctamente."
+    destroy:
+      deleted: "La categoría se ha borrado correctamente"
+    category:
+      edit: 'Editar'
+      delete: 'Borrar'
+  common:
+    back: 'Volver atrás'
+
+  shared:
+    header:
+      categories: 'Categorías'

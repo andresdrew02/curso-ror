@@ -1,13 +1,17 @@
 en:
+  title: Category
   activerecord:
     models:
       product: 'Product'
+      category: 'Category'
     attributes:
       product:
         title: 'Title'
         description: 'Description'
         price: '`Price'
         photo: 'Photo'
+      category:
+        name: 'Name'
     errors:
       models:
         product:
@@ -18,6 +22,10 @@ en:
               blank: 'is required'
             price:
               blank: 'is required'
+        category:
+          attributes:
+            name:
+              blank: 'es obligatorio'
 
   products:
     edit:
@@ -33,3 +41,27 @@ en:
   createdMsg: 'Product created successfully'
   editedMsg: "Product edited successfuly"
   deletedMsg: "Product deleted successfuly"
+
+  categories:
+    index:
+      title: 'Categories'
+      new: 'Create category'
+    edit:
+      title: 'Edit category'
+    new:
+      title: 'Create category'
+    update:
+      updated: "Category was successfully updated."
+    create:
+      created: "Category was successfully created."
+    destroy:
+      deleted: "Category was successfully destroyed."
+    category:
+      edit: 'Edit'
+      delete: 'Delete'
+  common:
+    back: 'Go back'
+
+  shared:
+    header:
+      categories: 'Categories'
