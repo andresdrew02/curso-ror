@@ -25,7 +25,8 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
       product: {
         title: 'Test',
         description: 'Test',
-        price: 1
+        price: 1,
+        category_id: categories(:one).id
       }
     }
 

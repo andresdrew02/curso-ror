@@ -10,6 +10,7 @@ en:
         description: 'Description'
         price: '`Price'
         photo: 'Photo'
+        category: 'Category'
       category:
         name: 'Name'
     errors:
@@ -22,6 +23,8 @@ en:
               blank: 'is required'
             price:
               blank: 'is required'
+            category:
+              required: 'is required'
         category:
           attributes:
             name:

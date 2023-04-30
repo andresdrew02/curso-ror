@@ -10,6 +10,8 @@ es:
         description: 'Descripción'
         price: 'Precio'
         photo: 'Foto'
+        category: 'Categoría'
+        category_id: 'Categoría'
       category:
         name: 'Nombre'
     errors:
@@ -22,6 +24,8 @@ es:
               blank: 'es obligatoria'
             price:
               blank: 'es obligatorio'
+            category:
+              required: 'es obligatoria'
         category:
           attributes:
             name:
