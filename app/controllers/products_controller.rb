@@ -20,10 +20,6 @@ class ProductsController < ApplicationController
     end
   end
 
-  def product_params
-    params.require(:product).permit(:title,:description,:price)
-  end
-
   def edit
     @product = Product.find(params[:id])
   end
@@ -38,4 +34,13 @@ class ProductsController < ApplicationController
     end
   end
 
+  def destroy
+    @product = Product.find(params[:id])
+    @product.destroy
+    redirect_to products_path, notice: 'Tu producto se ha eliminado correctamente', status: :see_other
+  end
+
+  def product_params
+    params.require(:product).permit(:title,:description,:price,:photo)
+  end
 end
