@@ -1,4 +1,4 @@
-<%= image_tag @product.photo %>
+<%= image_tag @product.photo, width: '200px' if @product.photo.attached? %>
 
 <h1 class="title">
   <%= @product.title %>
