@@ -62,4 +62,14 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_equal flash[:notice], 'El producto se ha editado correctamente'
   end
 
+  test 'does not allow to edit a product' do
+    patch edit_product_path(products(:one)), params: {
+      product: {
+        price: nil
+      }
+    }
+
+    assert_response :unprocessable_entity
+  end
+
 end
