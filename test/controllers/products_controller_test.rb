@@ -52,7 +52,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'allow to edit a product' do
-    patch edit_product_path(products(:one)), params: {
+    patch product_path(products(:one)), params: {
       product: {
         price: 125
       }
@@ -63,7 +63,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'does not allow to edit a product' do
-    patch edit_product_path(products(:one)), params: {
+    patch product_path(products(:one)), params: {
       product: {
         price: nil
       }
