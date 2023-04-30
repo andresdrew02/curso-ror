@@ -1,12 +1,4 @@
 <h1>Productos</h1>
-
-
-<% @products.each do | producto | %>
-  <%= link_to product_path(producto.id), class: 'product' do %>
-    <%= image_tag producto.photo, width: '100px' if producto.photo.attached? %>
-    <h2> <%= producto.title %></h2>
-  <%end %>
-  <span>
-    <%= producto.price %>$
-  </span>
-<% end %>
+<%= render partial: 'product', collection: @products %>
+<!--Renderizamos el partial _product.html.erb pasandole el array de
+productos, cada producto se itera por el nombre del partial, es decir, product-->
