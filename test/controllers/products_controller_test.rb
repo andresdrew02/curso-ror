@@ -30,6 +30,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     }
 
     assert_redirected_to products_path
+    assert_equal flash[:notice], 'Tu producto se ha creado correctamente'
   end
 
   test 'does not allow to create a new product with empty fields' do
@@ -40,7 +41,25 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
         price: 1
       }
     }
-
     assert_response :unprocessable_entity
   end
+
+  test 'render a edit product form' do
+    get edit_product_path(products(:one))
+
+    assert_response :success
+    assert_select 'form'
+  end
+
+  test 'allow to edit a product' do
+    patch edit_product_path(products(:one)), params: {
+      product: {
+        price: 125
+      }
+    }
+
+    assert_redirected_to products_path
+    assert_equal flash[:notice], 'El producto se ha editado correctamente'
+  end
+
 end
