@@ -1,5 +1,5 @@
 <%= link_to products_path do %>
-  <h1>Curso de Ruby-On-Rails</h1>
+  <h1><%= t('cursoTitle') %></h1>
 <% end %>
 
-<%= link_to 'Añadir producto', new_product_path %>
+<%= link_to t('addNewLinkTitle'), new_product_path %>

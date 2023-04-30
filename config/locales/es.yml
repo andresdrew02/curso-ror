@@ -1,0 +1,36 @@
+es:
+  activerecord:
+    models:
+      product: 'Producto'
+    attributes:
+      product:
+        title: 'Título'
+        description: 'Descripción'
+        price: 'Precio'
+        photo: 'Foto'
+    errors:
+      models:
+        product:
+          attributes:
+            title:
+              blank: 'es obligatorio'
+            description:
+              blank: 'es obligatoria'
+            price:
+              blank: 'es obligatorio'
+
+  products:
+    edit:
+      editTitle: 'Editar producto'
+      newTitle: 'Añadir Producto'
+    new:
+      addTitle: 'Añadir nuevo producto'
+    index:
+      mainTitle: 'Productos'
+
+  sureMsg: '¿Está seguro?'
+  cursoTitle: 'Curso de Ruby-On-Rails'
+  addNewLinkTitle: 'Crear producto'
+  createdMsg: 'Tu producto se ha creado correctamente'
+  editedMsg: "El producto se ha editado correctamente"
+  deletedMsg: 'Tu producto se ha eliminado correctamente'

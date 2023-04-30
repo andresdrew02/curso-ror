@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :categories
   # root "articles#index"
   #post '/products', to: 'products#create'
   #   patch '/products/:id', to: 'products#update'
