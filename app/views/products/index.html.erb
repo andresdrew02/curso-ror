@@ -1,5 +1,5 @@
 <!--Turbo frame para no recargar la página todo el rato-->
-<%= turbo_frame_tag 'products' do %>
+<%= turbo_frame_tag 'home' do %>
   <h1><%= t('.title') %></h1>
 
   <%= form_with url: products_path, method: :get do | form | %>
@@ -13,9 +13,9 @@
   <%end %>
   <%= link_to t('.all'), products_path %>
   <%= render partial: 'category', collection: @categories %>
-  <div class="products">
+
+  <%= turbo_frame_tag "products-#{@pagy.page}", class: 'products' do %>
     <%= render partial: 'product', collection: @products %>
-  </div>
-  <!--Renderizamos el partial _product.html.erb pasandole el array de
-  productos, cada producto se itera por el nombre del partial, es decir, product-->
+    <%= turbo_frame_tag "products-#{@pagy.next}", class: 'products', src: pagy_url_for(@pagy,@pagy.next), loading: :lazy if @pagy.next%>
+  <% end %>
 <% end %>
