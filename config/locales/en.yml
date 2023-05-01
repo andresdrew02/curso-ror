@@ -1,4 +1,8 @@
 en:
+  authentication:
+    users:
+      create:
+        created: 'User created successfully'
   meta_title: 'RoR Course'
   title: 'Category'
   activerecord:
@@ -14,6 +18,11 @@ en:
         category: 'Category'
       category:
         name: 'Name'
+      user:
+        email: 'Email'
+        username: 'Username'
+        password: 'Password'
+        password_digest: 'Password'
     errors:
       models:
         product:
@@ -29,8 +38,29 @@ en:
         category:
           attributes:
             name:
-              blank: 'es obligatorio'
-
+              blank: 'is required'
+        user:
+          attributes:
+            email:
+              too_long: 'is too long'
+              too_short: 'is too short'
+              blank: 'is required'
+              invalid: 'is invalid'
+            username:
+              too_long: 'is too long'
+              too_short: 'is too short'
+              blank: 'is required'
+              invalid: 'is invalid'
+            password_digest:
+              too_long: 'is too long'
+              too_short: 'is too short'
+              blank: 'is required'
+              invalid: 'is invalid'
+            password:
+              too_long: 'is too long'
+              too_short: 'is too short'
+              blank: 'is required'
+              invalid: 'is invalid'
   products:
     edit:
       editTitle: 'Edit product'

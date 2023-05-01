@@ -1,4 +1,8 @@
 es:
+  authentication:
+    users:
+      create:
+        created: 'Usuario creado satisfactoriamente'
   meta_title: 'Curso de RoR'
   title: 'Categorias'
   activerecord:
@@ -15,6 +19,11 @@ es:
         category_id: 'Categoría'
       category:
         name: 'Nombre'
+      user:
+        email: 'Email'
+        username: 'Nombre de usuario'
+        password: 'Contraseña'
+        password_digest: 'Contraseña'
     errors:
       models:
         product:
@@ -31,6 +40,28 @@ es:
           attributes:
             name:
               blank: 'es obligatorio'
+        user:
+          attributes:
+            email:
+              too_long: 'es muy largo'
+              too_short: 'es muy corto'
+              blank: 'es obligatorio'
+              invalid: 'es inválido'
+            username:
+              too_long: 'es muy largo'
+              too_short: 'es muy corto'
+              blank: 'es obligatorio'
+              invalid: 'es inválido'
+            password_digest:
+              too_long: 'es muy larga'
+              too_short: 'es muy corta'
+              blank: 'es obligatoria'
+              invalid: 'es inválida'
+            password:
+              too_long: 'es muy larga'
+              too_short: 'es muy corta'
+              blank: 'es obligatoria'
+              invalid: 'es inválida'
 
   products:
     edit:

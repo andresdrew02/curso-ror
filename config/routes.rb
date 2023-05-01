@@ -12,4 +12,8 @@ Rails.application.routes.draw do
   #el desglose de arriba son las mismas rutas creadas por la funcion resources
   #path:'/' hace que las rutas de products, (/products) resida en el root
   resources :products, path:'/'
+
+  namespace :authentication, path: '', as: '' do
+    resources :users, only: [:new, :create]
+  end
 end
