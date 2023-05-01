@@ -1,0 +1,11 @@
+one:
+  title: MyString
+  description: MyText
+  price: 1
+  category: one
+
+two:
+  title: MyString
+  description: MyText
+  price: 1
+  category: two

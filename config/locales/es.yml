@@ -1,0 +1,73 @@
+es:
+  title: Categorias
+  activerecord:
+    models:
+      product: 'Producto'
+      category: 'Categoría'
+    attributes:
+      product:
+        title: 'Título'
+        description: 'Descripción'
+        price: 'Precio'
+        photo: 'Foto'
+        category: 'Categoría'
+        category_id: 'Categoría'
+      category:
+        name: 'Nombre'
+    errors:
+      models:
+        product:
+          attributes:
+            title:
+              blank: 'es obligatorio'
+            description:
+              blank: 'es obligatoria'
+            price:
+              blank: 'es obligatorio'
+            category:
+              required: 'es obligatoria'
+        category:
+          attributes:
+            name:
+              blank: 'es obligatorio'
+
+  products:
+    edit:
+      editTitle: 'Editar producto'
+      newTitle: 'Añadir Producto'
+    new:
+      addTitle: 'Añadir nuevo producto'
+    index:
+      mainTitle: 'Productos'
+      all: 'Todos'
+
+  sureMsg: '¿Está seguro?'
+  cursoTitle: 'Curso de Ruby-On-Rails'
+  addNewLinkTitle: 'Crear producto'
+  createdMsg: 'Tu producto se ha creado correctamente'
+  editedMsg: "El producto se ha editado correctamente"
+  deletedMsg: 'Tu producto se ha eliminado correctamente'
+
+  categories:
+    index:
+      title: 'Categorias'
+      new: 'Crear categoría'
+    edit:
+      title: 'Editar categoría'
+    new:
+      title: 'Nueva categoría'
+    update:
+      updated: "La categoría se ha editado correctamente."
+    create:
+      created: "La categoría se ha creado correctamente."
+    destroy:
+      deleted: "La categoría se ha borrado correctamente"
+    category:
+      edit: 'Editar'
+      delete: 'Borrar'
+  common:
+    back: 'Volver atrás'
+
+  shared:
+    header:
+      categories: 'Categorías'
