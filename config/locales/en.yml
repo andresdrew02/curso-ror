@@ -3,6 +3,10 @@ en:
     users:
       create:
         created: 'User created successfully'
+    sessions:
+      create:
+        created: 'Welcome!'
+        failed: 'Invalid login!'
   meta_title: 'RoR Course'
   title: 'Category'
   activerecord:
