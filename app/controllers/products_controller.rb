@@ -15,11 +15,9 @@ class ProductsController < ApplicationController
       @products = @products.where("title like ?", "%#{params[:title]}%").
         or(@products.where("description like ?", "%#{params[:title]}%"))
     end
-    orders = {
-      newest: "created_at DESC",
-      expensives: "price DESC",
-      cheapest: "price ASC"
-    }.fetch(params[:order_by]&.to_sym, "created_at DESC")
+    orders =
+      Product::ORDER_BY.fetch(params[:order_by]&.to_sym,
+                              Product::ORDER_BY[:newest])
       @products = @products.order(orders).load_async
   end
 
