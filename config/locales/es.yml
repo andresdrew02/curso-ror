@@ -109,6 +109,7 @@ es:
       delete: 'Borrar'
   common:
     back: 'Volver atrás'
+    not_logged_in: 'Inicie sesión para continuar'
 
   shared:
     header:

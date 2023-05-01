@@ -107,6 +107,7 @@ en:
       delete: 'Delete'
   common:
     back: 'Go back'
+    not_logged_in: 'You need to login'
 
   shared:
     header:
