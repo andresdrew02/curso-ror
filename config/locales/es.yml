@@ -42,6 +42,7 @@ es:
       all: 'Todos'
       min_price: 'Precio mínimo'
       max_price: 'Precio máximo'
+      search: 'Busqueda por nombre o por descripción del producto'
 
   sureMsg: '¿Está seguro?'
   cursoTitle: 'Curso de Ruby-On-Rails'

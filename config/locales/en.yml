@@ -41,6 +41,8 @@ en:
       all: 'All'
       min_price: 'Minimun price'
       max_price: 'Maximum price'
+      search: 'Search by name or description of the product'
+
   sureMsg: 'Are you sure?'
   cursoTitle: 'Ruby-On-Rails course'
   addNewLinkTitle: 'Create product'

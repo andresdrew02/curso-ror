@@ -20,6 +20,12 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_select '.product', 2
   end
 
+  test 'render a list of filtered by name or description' do
+    get products_path(title: 'mys')
+    assert_response :success
+    assert_select '.product', 2
+  end
+
   test 'render a detailed product page' do
     get product_path(products(:one))
     assert_response :success

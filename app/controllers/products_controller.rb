@@ -11,6 +11,10 @@ class ProductsController < ApplicationController
     if params[:max_price].present?
       @products = @products.where("price <= ?", params[:max_price])
     end
+    if params[:title].present?
+      @products = @products.where("title like ?", "%#{params[:title]}%").
+        or(@products.where("description like ?", "%#{params[:title]}%"))
+    end
   end
 
   def show
