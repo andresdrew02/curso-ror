@@ -40,6 +40,8 @@ es:
     index:
       mainTitle: 'Productos'
       all: 'Todos'
+      min_price: 'Precio mínimo'
+      max_price: 'Precio máximo'
 
   sureMsg: '¿Está seguro?'
   cursoTitle: 'Curso de Ruby-On-Rails'
