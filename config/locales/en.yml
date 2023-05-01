@@ -39,6 +39,13 @@ en:
     index:
       mainTitle: 'Products'
       all: 'All'
+      min_price: 'Minimun price'
+      max_price: 'Maximum price'
+      search: 'Search by name or description of the product'
+      expensives: "Expensives"
+      cheapest: "Cheapest"
+      newest: "Newest"
+
   sureMsg: 'Are you sure?'
   cursoTitle: 'Ruby-On-Rails course'
   addNewLinkTitle: 'Create product'
