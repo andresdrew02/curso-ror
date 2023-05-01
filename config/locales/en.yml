@@ -1,5 +1,6 @@
 en:
-  title: Category
+  meta_title: 'RoR Course'
+  title: 'Category'
   activerecord:
     models:
       product: 'Product'
