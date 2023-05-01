@@ -5,7 +5,7 @@ one:
   category: one
 
 two:
-  title: MyString
+  title: MyStringa
   description: MyText
-  price: 1
+  price: 2
   category: two

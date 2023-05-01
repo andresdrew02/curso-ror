@@ -17,13 +17,27 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
   test 'render a list of filtered by min_price and max_price' do
     get products_path(min_price: 0, max_price: 1)
     assert_response :success
-    assert_select '.product', 2
+    assert_select '.product', 1
   end
 
   test 'render a list of filtered by name or description' do
     get products_path(title: 'mys')
     assert_response :success
     assert_select '.product', 2
+  end
+
+  test 'sort product by expensive' do
+    get products_path(order_by: 'expensives')
+    assert_response :success
+    assert_select '.product', 2
+    assert_select '.product:first-child h2', 'MyStringa'
+  end
+
+  test 'sort product by cheapest' do
+    get products_path(order_by: 'cheapest')
+    assert_response :success
+    assert_select '.product', 2
+    assert_select '.product:first-child h2', 'MyString'
   end
 
   test 'render a detailed product page' do

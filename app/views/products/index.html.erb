@@ -9,10 +9,13 @@
     onChange: 'this.form.requestSubmit()',value: params[:max_price]%>
     <%= form.text_field :title, placeholder: t('.search'),
     onChange: 'this.form.requestSubmit()', value: params[:title]%>
+    <%= form.select :order_by, options_for_select([["Recientes","newest"],["Mas caros","expensives"],["Mas baratos","cheapest"]],params[:order_by]), {}, {onChange: 'this.form.requestSubmit()'}%>
   <%end %>
   <%= link_to t('.all'), products_path %>
   <%= render partial: 'category', collection: @categories %>
-  <%= render partial: 'product', collection: @products %>
+  <div class="products">
+    <%= render partial: 'product', collection: @products %>
+  </div>
   <!--Renderizamos el partial _product.html.erb pasandole el array de
   productos, cada producto se itera por el nombre del partial, es decir, product-->
 <% end %>

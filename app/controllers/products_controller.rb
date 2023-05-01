@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   def index
     @categories = Category.all.order(name: :asc).load_async
-    @products = Product.all.with_attached_photo.order(created_at: :desc).load_async
+    @products = Product.all.with_attached_photo
     if params[:category_id]
       @products = @products.where(category_id: params[:category_id])
     end
@@ -15,6 +15,12 @@ class ProductsController < ApplicationController
       @products = @products.where("title like ?", "%#{params[:title]}%").
         or(@products.where("description like ?", "%#{params[:title]}%"))
     end
+    orders = {
+      newest: "created_at DESC",
+      expensives: "price DESC",
+      cheapest: "price ASC"
+    }.fetch(params[:order_by]&.to_sym, "created_at DESC")
+      @products = @products.order(orders).load_async
   end
 
   def show
